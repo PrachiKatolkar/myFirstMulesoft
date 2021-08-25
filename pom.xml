@@ -14,7 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.3.0-20210719</app.runtime>
-		<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.3.2</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -30,19 +30,18 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-                    <cloudHubDeployment>
-                        <uri>https://anypoint.mulesoft.com</uri>
-                        <muleVersion>${mule.version}</muleVersion>
-                        <username>${anypoint.username}</username>
-                        <password>${anypoint.password}</password>
-                        <environment>${env}</environment>
-                        <applicationName>${appname}</applicationName>
-                        <businessGroup>${business}</businessGroup>
-                        <workerType>${vCore}</workerType>
-                        <workers>${workers}</workers>
-                        <objectStoreV2>true</objectStoreV2>
-                    </cloudHubDeployment>
-                    <classifier>mule-application</classifier>
+                  <cloudHubDeployment>
+                    <uri>https://anypoint.mulesoft.com</uri>
+                    <muleVersion>${mule.version}</muleVersion>
+                    <username>${username}</username>
+                    <password>${password}</password>
+                    <applicationName>${appname}</applicationName>
+                    <environment>${env}</environment>
+                    <businessGropu>${business}</businessGropu>
+                    <workers>${workers}</workers>
+                    <workerType>${vCore}</workerType>
+                    <objectStoreV2>true</objectStoreV2>
+                   </cloudHubDeployment>
                 </configuration>
    			</plugin>
 		</plugins>
